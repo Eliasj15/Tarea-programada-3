@@ -15,9 +15,9 @@ class Variable{
     void setNegado();
     void setValor();
     void setSiguiente();
-    char getLetra();
-    bool getNegado();
-    bool getValor();
-    Variable *getSiguiente();
+    char getLetra(){return letra;};
+    bool getNegado(){return negado;};
+    bool getValor(){return valor;};
+    Variable *getSiguiente(){return siguiente;};
 };
 #endif
