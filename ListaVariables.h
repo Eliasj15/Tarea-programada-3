@@ -8,7 +8,7 @@ class ListaVariables{
     ListaVariables(){cabeza=nullptr;};
     ~ListaVariables(){delete cabeza;};
 
-    void agregarVariable();
+    void agregarVariable(Variable *p);
     
 };  
 #endif

@@ -11,10 +11,11 @@ class Variable{
     Variable(){siguiente=nullptr;};
     ~Variable(){delete siguiente;};
 
+    Variable (char c, bool n, bool v){letra=c;negado=n;valor=v;};
     void setLetra();
     void setNegado();
     void setValor();
-    void setSiguiente();
+    void setSiguiente(Variable *p){siguiente=p;};
     char getLetra(){return letra;};
     bool getNegado(){return negado;};
     bool getValor(){return valor;};
