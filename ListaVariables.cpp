@@ -9,7 +9,6 @@ void ListaVariables::agregarVariable(Variable *p){
     }
     else{
         Variable *it=getCabeza();
-        bool x=it->getSiguiente()!=nullptr;
         while((it->getSiguiente())!=nullptr){
             it=it->getSiguiente();
         }
