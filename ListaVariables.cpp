@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ListaVariables.h"
+#include "Variable.h"
 using namespace std;
 
 void ListaVariables::agregarVariable(Variable *p){
@@ -7,10 +8,21 @@ void ListaVariables::agregarVariable(Variable *p){
         cabeza=p;
     }
     else{
-        Variable *it=cabeza;
-        while(it!=nullptr){
+        Variable *it=getCabeza();
+        bool x=it->getSiguiente()!=nullptr;
+        while((it->getSiguiente())!=nullptr){
             it=it->getSiguiente();
         }
         it->setSiguiente(p);
     }
+}
+
+bool ListaVariables::evaluarVariablesMintermino(){
+    bool resultado=true;
+    Variable *it=getCabeza();
+    while(it!=nullptr&&resultado){
+        resultado=resultado&&it->getValor();
+        it=it->getSiguiente();
+    }
+    return resultado;
 }

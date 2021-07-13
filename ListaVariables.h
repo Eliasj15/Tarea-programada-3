@@ -9,6 +9,8 @@ class ListaVariables{
     ~ListaVariables(){delete cabeza;};
 
     void agregarVariable(Variable *p);
+    Variable *getCabeza(){return cabeza;};
+    bool evaluarVariablesMintermino();//recibe estados de las variables del mintermino en general
     
 };  
 #endif
