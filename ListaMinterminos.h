@@ -8,8 +8,8 @@ class ListaMinterminos{
     ListaMinterminos(){cabeza=nullptr;};
     ~ListaMinterminos(){delete cabeza;};
 
-    void agregarMintermino(ListaVariables *p);
-    bool evaluarMonomios();
-
+    void agregarMintermino(Mintermino*p);
+    bool evaluarTodosMonomios();
+    Mintermino *getCabeza(){return cabeza;};
 };
 #endif
