@@ -9,9 +9,10 @@ class Mintermino{
     public:
     Mintermino(){lista=nullptr;};
     ~Mintermino(){delete lista;};
-
+    Mintermino(ListaVariables *l){lista=l;siguiente=nullptr;};
     bool evaluarMintermino();
-    void setSiguiente();
-    Mintermino getSiguiente();
+    void setSiguiente(Mintermino *m){siguiente=m;};
+    ListaVariables *getListaVariables(){return lista;};
+    Mintermino *getSiguiente(){return siguiente;};
 };
 #endif
