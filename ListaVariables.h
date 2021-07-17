@@ -10,7 +10,7 @@ class ListaVariables{
 
     void agregarVariable(Variable *p);
     Variable *getCabeza(){return cabeza;};
-    bool evaluarVariablesMintermino();//recibe estados de las variables del mintermino en general
+    bool evaluarVariablesMintermino();
     
 };  
 #endif
