@@ -5,7 +5,6 @@
 using namespace std;
 
 void Controlador::rellenarLista(string entrada){
-    int contador=0;
     ListaVariables *l=new ListaVariables();
     bool estado=true;
     for (int i=0;i<entrada.size();i++){
