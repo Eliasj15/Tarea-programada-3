@@ -1,6 +1,5 @@
 #include <iostream>
 #include "ListaVariables.h"
-//#include "Variable.h"
 using namespace std;
 
 void ListaVariables::agregarVariable(Variable *p){
