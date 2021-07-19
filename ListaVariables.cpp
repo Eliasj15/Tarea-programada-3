@@ -15,10 +15,26 @@ void ListaVariables::agregarVariable(Variable *p){
     }
 }
 
-bool ListaVariables::evaluarVariablesMintermino(){
+bool ListaVariables::evaluarVariablesMintermino(bool a, bool b, bool c, bool d){
     bool resultado=true;
     Variable *it=getCabeza();
     while(it!=nullptr&&resultado){
+        if(it->getLetra()=='a'){
+            it->setValor(a);
+        }
+        else{
+            if(it->getLetra()=='b'){
+                it->setValor(b);
+            }
+            else{
+                if(it->getLetra()=='c'){
+                    it->setValor(c);
+                }
+                else{
+                    it->setValor(d);
+                }
+            }
+        }
         resultado=resultado&&it->getValor();
         it=it->getSiguiente();
     }

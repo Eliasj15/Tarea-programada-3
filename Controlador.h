@@ -14,7 +14,7 @@ class Controlador{
     ~Controlador(){delete lista;};
 
     void rellenarLista(string entrada);
-    bool devolverResultado(){return lista->evaluarTodosMonomios();};
+    bool devolverResultado(bool a, bool b, bool c, bool d){return lista->evaluarTodosMinterminos(a,b,c,d);};
     ListaMinterminos *getLista(){return lista;};
 };
 

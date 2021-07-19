@@ -15,12 +15,12 @@ void ListaMinterminos::agregarMintermino(Mintermino *m){
     }
 }
 
-bool ListaMinterminos::evaluarTodosMonomios(){
+bool ListaMinterminos::evaluarTodosMinterminos(bool a, bool b, bool c, bool d){
     bool resultado=false;
     Mintermino *it=cabeza;
     while(it!=nullptr){
         ListaVariables *lV=it->getListaVariables();
-        resultado=resultado||lV->evaluarVariablesMintermino();
+        resultado=resultado||lV->evaluarVariablesMintermino(a,b,c,d);
         it=it->getSiguiente();
     }
     return resultado;

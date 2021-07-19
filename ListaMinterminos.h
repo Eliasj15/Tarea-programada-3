@@ -9,7 +9,7 @@ class ListaMinterminos{
     ~ListaMinterminos(){delete cabeza;};
 
     void agregarMintermino(Mintermino*p);
-    bool evaluarTodosMonomios();
+    bool evaluarTodosMinterminos(bool a, bool b, bool c, bool d);
     Mintermino *getCabeza(){return cabeza;};
 };
 #endif
