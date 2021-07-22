@@ -10,7 +10,7 @@ class ListaVariables{
     ListaVariables(){cabeza=nullptr;};
     ~ListaVariables(){delete cabeza;};
 
-    void agregarVariable(T p);
+    void agregarVariable(T *p);
     T *getCabeza(){return cabeza;};
     bool evaluarVariablesMintermino(bool a, bool b, bool c, bool d);
     
@@ -18,7 +18,7 @@ class ListaVariables{
 #endif
 
 template <class T>
-void ListaVariables<T>::agregarVariable(T p){
+void ListaVariables<T>::agregarVariable(T *p){
     if(cabeza==nullptr){
         cabeza=p;
     }
