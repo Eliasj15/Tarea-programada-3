@@ -23,7 +23,7 @@ void ListaVariables<T>::agregarVariable(T *p){
         cabeza=p;
     }
     else{
-        Variable *it=getCabeza();
+        Variable<char> *it=getCabeza();
         while((it->getSiguiente())!=nullptr){
             it=it->getSiguiente();
         }
@@ -34,7 +34,7 @@ void ListaVariables<T>::agregarVariable(T *p){
 template <class T>
 bool ListaVariables<T>::evaluarVariablesMintermino(bool a, bool b, bool c, bool d){
     bool resultado=true;
-    Variable *it=getCabeza();
+    Variable<char> *it=getCabeza();
     while(it!=nullptr&&resultado){
         if(it->getLetra()=='a'){
             it->setValor(a);

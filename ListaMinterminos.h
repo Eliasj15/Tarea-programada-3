@@ -23,7 +23,7 @@ void ListaMinterminos<T>::agregarMintermino(T *m){
         cabeza=m;
     }
     else{
-        Mintermino *it=cabeza;
+        Mintermino<ListaVariables<Variable<char>>> *it=cabeza;
         while((it->getSiguiente())!=nullptr){
             it=it->getSiguiente();
         }
@@ -34,9 +34,9 @@ void ListaMinterminos<T>::agregarMintermino(T *m){
 template <class T>
 bool ListaMinterminos<T>::evaluarTodosMinterminos(bool a, bool b, bool c, bool d){
     bool resultado=false;
-    Mintermino *it=cabeza;
+    Mintermino<ListaVariables<Variable<char>>> *it=cabeza;
     while(it!=nullptr){
-        ListaVariables *lV=it->getListaVariables();
+        ListaVariables<Variable<char>> *lV=it->getListaVariables();
         resultado=resultado||lV->evaluarVariablesMintermino(a,b,c,d);
         it=it->getSiguiente();
     }

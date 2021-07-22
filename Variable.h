@@ -5,7 +5,7 @@ template <class T>
 class Variable{
     T letra;
     bool valor;
-    U *siguiente;
+    Variable<char> *siguiente;
 
     public:
     Variable(){siguiente=nullptr;};

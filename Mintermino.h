@@ -5,7 +5,7 @@
 template<class T>
 class Mintermino{
     T *lista;
-    Mintermino *siguiente;
+    Mintermino<ListaVariables<Variable<char>>> *siguiente;
 
     public:
     Mintermino(){lista=nullptr;};
