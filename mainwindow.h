@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QTreeWidgetItem>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -10,6 +10,9 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+    void agregarRaiz(QString funcion);
+    void agregarHijo(QTreeWidgetItem *padre, QString mintermino);
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -47,6 +50,8 @@ private slots:
     void on_pushButton_18_clicked();
 
     void on_pushButton_13_clicked();
+
+    void on_pushButton_19_clicked();
 
 private:
     Ui::MainWindow *ui;

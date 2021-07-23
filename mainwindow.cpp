@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->treeWidget->setColumnCount(1);
+    agregarRaiz("Funcion");
 }
 
 MainWindow::~MainWindow()
@@ -204,4 +206,39 @@ void MainWindow::on_pushButton_13_clicked()
             ui->pushButton_13->setText("0");
         }
     }
+}
+
+void MainWindow::on_pushButton_19_clicked()
+{   /*
+      Retomar adelante:
+    c->rellenarMatriz(ui->pushButton_3->text(),0,0);
+    c->rellenarMatriz(ui->pushButton_4->text(),0,1);
+    c->rellenarMatriz(ui->pushButton_6->text(),0,2);
+    c->rellenarMatriz(ui->pushButton_5->text(),0,3);
+    c->rellenarMatriz(ui->pushButton_9->text(),1,0);
+    c->rellenarMatriz(ui->pushButton_7->text(),1,1);
+    c->rellenarMatriz(ui->pushButton_10->text(),1,2);
+    c->rellenarMatriz(ui->pushButton_8->text(),1,3);
+    c->rellenarMatriz(ui->pushButton_16->text(),2,0);
+    c->rellenarMatriz(ui->pushButton_11->text(),2,1);
+    c->rellenarMatriz(ui->pushButton_17->text(),2,2);
+    c->rellenarMatriz(ui->pushButton_14->text(),2,3);
+    c->rellenarMatriz(ui->pushButton_15->text(),3,0);
+    c->rellenarMatriz(ui->pushButton_12->text(),3,1);
+    c->rellenarMatriz(ui->pushButton_18->text(),3,2);
+    c->rellenarMatriz(ui->pushButton_13->text(),3,3);*/
+}
+
+void MainWindow::agregarRaiz(QString funcion){
+    QTreeWidgetItem *t=new QTreeWidgetItem(ui->treeWidget);
+    t->setText(0,funcion);
+    ui->treeWidget->addTopLevelItem(t);
+    agregarHijo(t,"uno");//aquí se modifican los parámetros mostrar
+    agregarHijo(t,"dos");
+}
+
+void MainWindow::agregarHijo(QTreeWidgetItem *padre, QString mintermino){
+    QTreeWidgetItem *h=new QTreeWidgetItem();
+    h->setText(0,mintermino);
+    padre->addChild(h);
 }
