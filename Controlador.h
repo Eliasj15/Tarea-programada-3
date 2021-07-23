@@ -22,6 +22,7 @@ class Controlador{
     void rellenarLista(string entrada);
     bool devolverResultado(bool a, bool b, bool c, bool d){return lista->evaluarTodosMinterminos(a,b,c,d);};
     ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>> *getLista(){return lista;};
+    string refresh(){ return "Hola"; };
 };
 
 #endif
