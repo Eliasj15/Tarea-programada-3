@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow
 
     void agregarRaiz(QString funcion);
     void agregarHijo(QTreeWidgetItem *padre, QString mintermino);
+    QTreeWidgetItem *padre;
 
 public:
     Controlador *c;
@@ -26,6 +27,7 @@ public:
     ~MainWindow();
 
     void setControlador(Controlador *p){c=p;};
+    void nuevoHijo(std::string mintermino);
 
 private slots:
     void on_pushButton_3_clicked();
@@ -67,6 +69,8 @@ private slots:
     void on_pushButton_21_clicked();
 
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
