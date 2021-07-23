@@ -10,10 +10,6 @@ CONFIG += c++11
 
 SOURCES += \
     Controlador.cpp \
-    ListaMinterminos.cpp \
-    ListaVariables.cpp \
-    Mintermino.cpp \
-    Variable.cpp \
     main.cpp \
     mainwindow.cpp
 
