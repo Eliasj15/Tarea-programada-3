@@ -271,4 +271,5 @@ void MainWindow::on_pushButton_clicked()
     QString n=ui->lineEdit->text();
     string entrada=n.toUtf8().constData();
     c->rellenarLista(entrada);
+    c->agregarFuncion(entrada);
 }

@@ -22,7 +22,7 @@ std::string Bitacora::read(){
     archivo.open(name, std::ios::in);
     while(!archivo.eof()){
         getline(archivo, text);
-        b += text;
+        b += text+"\n";
     }
     archivo.close();
     return b;

@@ -79,3 +79,7 @@ string Controlador::refresh(){
     string text = b->read();
     return text;
 }
+
+void Controlador::agregarFuncion(string u){
+    b->write(u);
+}

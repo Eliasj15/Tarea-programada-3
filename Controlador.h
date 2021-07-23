@@ -26,6 +26,7 @@ class Controlador{
     string refresh();
     string obtenerHilera();
     void rellenarMatriz(int v, int f, int c);
+    void agregarFuncion(string u);
 };
 
 #endif
