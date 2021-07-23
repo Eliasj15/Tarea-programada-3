@@ -10,50 +10,45 @@ class ListaVariables{
     ListaVariables(){cabeza=nullptr;};
     ~ListaVariables(){delete cabeza;};
 
-    void agregarVariable(T *p);
+    void agregarVariable(T *p){
+        if(cabeza==nullptr){
+            cabeza=p;
+        }
+        else{
+            Variable<char> *it=getCabeza();
+            while((it->getSiguiente())!=nullptr){
+                it=it->getSiguiente();
+            }
+            it->setSiguiente(p);
+        }
+    };
     T *getCabeza(){return cabeza;};
-    bool evaluarVariablesMintermino(bool a, bool b, bool c, bool d);
+    bool evaluarVariablesMintermino(bool a, bool b, bool c, bool d){
+        bool resultado=true;
+        Variable<char> *it=getCabeza();
+        while(it!=nullptr&&resultado){
+            if(it->getLetra()=='a'){
+                it->setValor(a);
+            }
+            else{
+                if(it->getLetra()=='b'){
+                    it->setValor(b);
+                }
+                else{
+                    if(it->getLetra()=='c'){
+                        it->setValor(c);
+                    }
+                    else{
+                        it->setValor(d);
+                    }
+                }
+            }
+            resultado=resultado&&it->getValor();
+            it=it->getSiguiente();
+        }
+        return resultado;
+    };
     
 };  
 #endif
 
-template <class T>
-void ListaVariables<T>::agregarVariable(T *p){
-    if(cabeza==nullptr){
-        cabeza=p;
-    }
-    else{
-        Variable<char> *it=getCabeza();
-        while((it->getSiguiente())!=nullptr){
-            it=it->getSiguiente();
-        }
-        it->setSiguiente(p);
-    }
-}
-
-template <class T>
-bool ListaVariables<T>::evaluarVariablesMintermino(bool a, bool b, bool c, bool d){
-    bool resultado=true;
-    Variable<char> *it=getCabeza();
-    while(it!=nullptr&&resultado){
-        if(it->getLetra()=='a'){
-            it->setValor(a);
-        }
-        else{
-            if(it->getLetra()=='b'){
-                it->setValor(b);
-            }
-            else{
-                if(it->getLetra()=='c'){
-                    it->setValor(c);
-                }
-                else{
-                    it->setValor(d);
-                }
-            }
-        }
-        resultado=resultado&&it->getValor();
-        it=it->getSiguiente();
-    }
-    return resultado;
-}
