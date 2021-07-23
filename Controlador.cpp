@@ -29,3 +29,4 @@ void Controlador::rellenarLista(string entrada){
         }
     }
 }
+
