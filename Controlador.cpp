@@ -34,6 +34,38 @@ void Controlador::rellenarLista(string entrada){
     }
 }
 
+void Controlador::rellenarMatriz(int v, int f, int c){
+    matriz[f][c]=v;
+}
+
+string Controlador::obtenerHilera(){
+    bool primero=false;
+    string resultado="";
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(matriz[i][j]==1){
+                if(primero){
+                    resultado+="+";
+                }
+                primero=true;
+                switch(j){
+                    case 0: resultado+="ab";break;
+                    case 1: resultado+="ab'";break;
+                    case 2: resultado+="a'b'";break;
+                    case 3: resultado+="a'b";break;
+                }
+                switch(i){
+                    case 0:resultado+="cd";break;
+                    case 1: resultado+="cd'";break;
+                    case 2: resultado+="c'd'";break;
+                    case 3: resultado+="c'd";break;
+                }
+
+            }
+        }
+    }
+    return resultado;
+}
 string Controlador::refresh(){
     string text = b->read();
     return text;

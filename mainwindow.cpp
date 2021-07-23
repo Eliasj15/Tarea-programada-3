@@ -209,24 +209,23 @@ void MainWindow::on_pushButton_13_clicked()
 }
 
 void MainWindow::on_pushButton_19_clicked()
-{   /*
-      Retomar adelante:
-    c->rellenarMatriz(ui->pushButton_3->text(),0,0);
-    c->rellenarMatriz(ui->pushButton_4->text(),0,1);
-    c->rellenarMatriz(ui->pushButton_6->text(),0,2);
-    c->rellenarMatriz(ui->pushButton_5->text(),0,3);
-    c->rellenarMatriz(ui->pushButton_9->text(),1,0);
-    c->rellenarMatriz(ui->pushButton_7->text(),1,1);
-    c->rellenarMatriz(ui->pushButton_10->text(),1,2);
-    c->rellenarMatriz(ui->pushButton_8->text(),1,3);
-    c->rellenarMatriz(ui->pushButton_16->text(),2,0);
-    c->rellenarMatriz(ui->pushButton_11->text(),2,1);
-    c->rellenarMatriz(ui->pushButton_17->text(),2,2);
-    c->rellenarMatriz(ui->pushButton_14->text(),2,3);
-    c->rellenarMatriz(ui->pushButton_15->text(),3,0);
-    c->rellenarMatriz(ui->pushButton_12->text(),3,1);
-    c->rellenarMatriz(ui->pushButton_18->text(),3,2);
-    c->rellenarMatriz(ui->pushButton_13->text(),3,3);*/
+{
+    c->rellenarMatriz(ui->pushButton_3->text().toInt(),0,0);
+    c->rellenarMatriz(ui->pushButton_4->text().toInt(),0,1);
+    c->rellenarMatriz(ui->pushButton_6->text().toInt(),0,2);
+    c->rellenarMatriz(ui->pushButton_5->text().toInt(),0,3);
+    c->rellenarMatriz(ui->pushButton_9->text().toInt(),1,0);
+    c->rellenarMatriz(ui->pushButton_7->text().toInt(),1,1);
+    c->rellenarMatriz(ui->pushButton_10->text().toInt(),1,2);
+    c->rellenarMatriz(ui->pushButton_8->text().toInt(),1,3);
+    c->rellenarMatriz(ui->pushButton_16->text().toInt(),2,0);
+    c->rellenarMatriz(ui->pushButton_11->text().toInt(),2,1);
+    c->rellenarMatriz(ui->pushButton_17->text().toInt(),2,2);
+    c->rellenarMatriz(ui->pushButton_14->text().toInt(),2,3);
+    c->rellenarMatriz(ui->pushButton_15->text().toInt(),3,0);
+    c->rellenarMatriz(ui->pushButton_12->text().toInt(),3,1);
+    c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
+    c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
 }
 
 void MainWindow::agregarRaiz(QString funcion){

@@ -2,10 +2,11 @@
 #define CONTROLADOR_H
 #include <iostream>
 #include <string>
+#include "mainwindow.h"
 #include "ListaVariables.h"
 #include "ListaMinterminos.h"
 #include "Bitacora.h"
-#include "mainwindow.h"
+
 
 using namespace std;
 
@@ -25,6 +26,8 @@ class Controlador{
     bool devolverResultado(bool a, bool b, bool c, bool d){return lista->evaluarTodosMinterminos(a,b,c,d);};
     ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>> *getLista(){return lista;};
     string refresh();
+    string obtenerHilera();
+    void rellenarMatriz(int v, int f, int c);
 };
 
 #endif
