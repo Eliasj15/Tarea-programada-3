@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Controlador.h"
 #include <string>
+#include "ListaMinterminos.h"
+#include "ListaVariables.h"
+#include <QApplication>
 
 using namespace std;
 

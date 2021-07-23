@@ -2,11 +2,13 @@
 #define MAINWINDOW_H
 #include <QTreeWidgetItem>
 #include <QMainWindow>
-
+#include "Controlador.h"
+#include <QMainWindow>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+class Controlador;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -15,8 +17,12 @@ class MainWindow : public QMainWindow
     void agregarHijo(QTreeWidgetItem *padre, QString mintermino);
 
 public:
+    Controlador *c;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void setControlador(Controlador *p){c=p;};
+
 
 private slots:
     void on_pushButton_3_clicked();
