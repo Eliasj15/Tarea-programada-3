@@ -27,7 +27,6 @@ public:
 
     void setControlador(Controlador *p){c=p;};
 
-
 private slots:
     void on_pushButton_3_clicked();
 
@@ -64,6 +63,8 @@ private slots:
     void on_pushButton_19_clicked();
 
     void on_pushButton_20_clicked();
+
+    void on_pushButton_21_clicked();
 
 private:
     Ui::MainWindow *ui;

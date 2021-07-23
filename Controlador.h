@@ -18,7 +18,6 @@ class Controlador{
     Bitacora *b;//= new Bitacora();
 
     public:
-    //Controlador(){lista = new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();w=new MainWindow(nullptr);w->setControlador(this);};
     Controlador();
     ~Controlador(){delete lista;};
     void rellenarLista(string entrada);

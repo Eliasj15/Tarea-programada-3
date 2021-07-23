@@ -247,3 +247,20 @@ void MainWindow::on_pushButton_20_clicked()
     QString text = QString::fromStdString(c->refresh());
     ui->textEdit->setText(text);
 }
+
+void MainWindow::on_pushButton_21_clicked()
+{
+    QString v=ui->lineEdit_2->text();
+    bool aEstado=(v=="True")?true:false;
+    v=ui->lineEdit_2->text();
+    bool bEstado=(v=="True")?true:false;
+    v=ui->lineEdit_2->text();
+    bool cEstado=(v=="True")?true:false;
+    v=ui->lineEdit_2->text();
+    bool dEstado=(v=="True")?true:false;
+    bool resultado=c->devolverResultado(aEstado,bEstado,cEstado,dEstado);
+    v=(resultado==true)?"True":"False";
+    ui->lineEdit_5->setText(v);
+
+}
+
