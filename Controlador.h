@@ -15,7 +15,7 @@ class Controlador{
     MainWindow *w;
     ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>> *lista;
     int matriz[4][4];
-    Bitacora *b = new Bitacora();
+    Bitacora *b;//= new Bitacora();
 
     public:
     //Controlador(){lista = new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();w=new MainWindow(nullptr);w->setControlador(this);};

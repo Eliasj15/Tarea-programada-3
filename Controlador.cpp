@@ -2,11 +2,19 @@
 #include "mainwindow.h"
 #include "ListaMinterminos.h"
 #include "Bitacora.h"
-#include <QApplication>
 #include <QString>
+
+#include <QApplication>
 
 using namespace std;
 
+Controlador::Controlador(){
+    w=new MainWindow(nullptr);
+    w->setControlador(this);
+    lista=new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();
+    b= new Bitacora();
+    w->show();
+}
 void Controlador::rellenarLista(string entrada){
     QString cadena=QString::fromStdString(entrada);
     int limite=cadena.size();
