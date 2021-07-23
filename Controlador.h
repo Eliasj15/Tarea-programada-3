@@ -13,7 +13,7 @@ class Controlador{
     int matriz[4][4];
 
     public:
-    Controlador(){lista = new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();matriz={{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};};//
+    Controlador(){lista = new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();};//
     ~Controlador(){delete lista;};
     void rellenarLista(string entrada);
     bool devolverResultado(bool a, bool b, bool c, bool d){return lista->evaluarTodosMinterminos(a,b,c,d);};
