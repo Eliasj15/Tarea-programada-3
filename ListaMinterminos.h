@@ -2,6 +2,7 @@
 #define LISTAMINTERMINOS_H
 #include "Mintermino.h"
 
+
 template <class T>
 class ListaMinterminos{
     T *cabeza;

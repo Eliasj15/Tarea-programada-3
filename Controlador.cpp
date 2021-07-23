@@ -3,6 +3,7 @@
 #include <string>
 #include "ListaMinterminos.h"
 #include "ListaVariables.h"
+#include "Bitacora.h"
 #include <QApplication>
 
 using namespace std;
@@ -33,3 +34,7 @@ void Controlador::rellenarLista(string entrada){
     }
 }
 
+string Controlador::refresh(){
+    string text = b->read();
+    return text;
+}
