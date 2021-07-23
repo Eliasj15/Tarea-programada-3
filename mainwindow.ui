@@ -96,13 +96,6 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Evaluar</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLineEdit" name="lineEdit_5"/>
        </item>
        <item>
@@ -453,6 +446,13 @@
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_21">
+         <property name="text">
+          <string>Enviar valores para evaluar</string>
+         </property>
         </widget>
        </item>
       </layout>
