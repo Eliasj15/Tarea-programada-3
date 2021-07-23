@@ -226,6 +226,7 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_12->text().toInt(),3,1);
     c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
+    c->rellenarLista(c->obtenerHilera());
 }
 
 void MainWindow::agregarRaiz(QString funcion){
@@ -252,11 +253,11 @@ void MainWindow::on_pushButton_21_clicked()
 {
     QString v=ui->lineEdit_2->text();
     bool aEstado=(v=="True")?true:false;
-    v=ui->lineEdit_2->text();
+    v=ui->lineEdit_4->text();
     bool bEstado=(v=="True")?true:false;
-    v=ui->lineEdit_2->text();
+    v=ui->lineEdit_3->text();
     bool cEstado=(v=="True")?true:false;
-    v=ui->lineEdit_2->text();
+    v=ui->lineEdit_6->text();
     bool dEstado=(v=="True")?true:false;
     bool resultado=c->devolverResultado(aEstado,bEstado,cEstado,dEstado);
     v=(resultado==true)?"True":"False";
