@@ -1,9 +1,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+
+#include "Controlador.h"
+
+#include <QMainWindow>
+
 #include <QTreeWidgetItem>
 #include <QMainWindow>
-#include "Controlador.h"
-#include <QMainWindow>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

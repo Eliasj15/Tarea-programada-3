@@ -1,10 +1,10 @@
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
+#include <QString>
 #include "mainwindow.h"
 #include "ListaMinterminos.h"
 #include "Bitacora.h"
 #include <iostream>
-#include <string>
 
 
 using namespace std;

@@ -1,8 +1,6 @@
-#include <iostream>
 #include "Controlador.h"
-#include <string>
+#include "mainwindow.h"
 #include "ListaMinterminos.h"
-#include "ListaVariables.h"
 #include "Bitacora.h"
 #include <QApplication>
 #include <QString>
