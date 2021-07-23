@@ -233,7 +233,7 @@ void MainWindow::agregarRaiz(QString funcion){
     QTreeWidgetItem *t=new QTreeWidgetItem(ui->treeWidget);
     t->setText(0,funcion);
     ui->treeWidget->addTopLevelItem(t);
-    agregarHijo(t,"uno");//aquí se modifican los parámetros mostrar
+    agregarHijo(t,"uno");//aquí se modifican los parámetros a mostrar
     agregarHijo(t,"dos");
 }
 
