@@ -242,3 +242,8 @@ void MainWindow::agregarHijo(QTreeWidgetItem *padre, QString mintermino){
     h->setText(0,mintermino);
     padre->addChild(h);
 }
+
+void MainWindow::on_pushButton_20_clicked(QString t)
+{
+    ui->textEdit->setText(t);
+}

@@ -53,6 +53,8 @@ private slots:
 
     void on_pushButton_19_clicked();
 
+    void on_pushButton_20_clicked(QString t);
+
 private:
     Ui::MainWindow *ui;
 };
