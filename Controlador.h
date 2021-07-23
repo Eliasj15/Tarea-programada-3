@@ -1,11 +1,10 @@
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
-#include <iostream>
-#include <string>
 #include "mainwindow.h"
-#include "ListaVariables.h"
 #include "ListaMinterminos.h"
 #include "Bitacora.h"
+#include <iostream>
+#include <string>
 
 
 using namespace std;

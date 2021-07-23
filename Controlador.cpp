@@ -5,24 +5,27 @@
 #include "ListaVariables.h"
 #include "Bitacora.h"
 #include <QApplication>
+#include <QString>
 
 using namespace std;
 
 void Controlador::rellenarLista(string entrada){
+    QString cadena=QString::fromStdString(entrada);
+    int limite=cadena.size();
     ListaVariables<Variable<char>> *l=new ListaVariables<Variable<char>>();
     bool estado=true;
-    for (int i=0;i<entrada.size();i++){
+    for (int i=0;i<limite;i++){
         if(entrada[i]!='+'&&entrada[i]!='\''){
-            if(entrada[i+1]=='\''&&i+1<entrada.size()){
+            if(entrada[i+1]=='\''&&i+1<limite){
                 estado=false;
             }
             Variable<char> *n=new Variable<char>(entrada[i],estado);
             l->agregarVariable(n);    
             estado=true;
-            bool condicionUno=i+1<entrada.size()-1&&entrada[i+1]=='+';
-            bool condicionDos=i+2<entrada.size()-2&&entrada[i+2]=='+';
-            bool condicionTres=i==entrada.size()-1;
-            bool condicionCuatro=entrada[i+1]=='\''&&i+2==entrada.size();
+            bool condicionUno=i+1<limite-1&&entrada[i+1]=='+';
+            bool condicionDos=i+2<limite-2&&entrada[i+2]=='+';
+            bool condicionTres=i==limite-1;
+            bool condicionCuatro=entrada[i+1]=='\''&&i+2==limite;
             if(condicionUno||condicionDos||condicionTres||condicionCuatro){
                 Mintermino<ListaVariables<Variable<char>>> *m=new Mintermino<ListaVariables<Variable<char>>>(l);
                 lista->agregarMintermino(m);
