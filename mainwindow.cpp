@@ -227,8 +227,65 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
+<<<<<<< Updated upstream
     mostrarHijos();
     ui->lineEdit->setText(QString::fromStdString(c->devolverMinterminos()));
+=======
+    bitacoraKarnaugh();
+}
+
+void MainWindow::bitacoraKarnaugh(){
+    std::string texto;
+    if(ui->pushButton_3->text().toInt()==1){
+        texto+= "abcd+";
+    }
+    if(ui->pushButton_4->text().toInt()==1){
+        texto+= "ab'cd'+";
+    }
+    if(ui->pushButton_6->text().toInt()==1){
+        texto+= "a'b'cd+";
+    }
+    if(ui->pushButton_5->text().toInt()==1){
+        texto+= "a'bcd+";
+    }
+    if(ui->pushButton_9->text().toInt()==1){
+        texto+= "abcd'+";
+    }
+    if(ui->pushButton_7->text().toInt()==1){
+        texto+= "ab'cd'+";
+    }
+    if(ui->pushButton_10->text().toInt()==1){
+        texto+= "a'b'cd'+";
+    }
+    if(ui->pushButton_8->text().toInt()==1){
+        texto+= "a'bcd'+";
+    }
+    if(ui->pushButton_16->text().toInt()==1){
+        texto+= "abc'd'+";
+    }
+    if(ui->pushButton_11->text().toInt()==1){
+        texto+= "ab'c'd'+";
+    }
+    if(ui->pushButton_17->text().toInt()==1){
+        texto+= "a'b'c'd'+";
+    }
+    if(ui->pushButton_14->text().toInt()==1){
+        texto+= "a'bc'd'+";
+    }
+    if(ui->pushButton_15->text().toInt()==1){
+        texto+= "abc'd+";
+    }
+    if(ui->pushButton_12->text().toInt()==1){
+        texto+= "ab'c'd+";
+    }
+    if(ui->pushButton_18->text().toInt()==1){
+        texto+= "a'b'c'd+";
+    }
+    if(ui->pushButton_13->text().toInt()==1){
+        texto+= "a'bc'd+";
+    }
+    c->agregarFuncion(texto);
+>>>>>>> Stashed changes
 }
 
 void MainWindow::agregarRaiz(QString funcion){
