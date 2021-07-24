@@ -64,11 +64,12 @@ string Controlador::obtenerHilera(){
                     case 3: resultado+="a'b";break;
                 }
                 switch(i){
-                    case 0: resultado+="cd";break;
+                    case 0:resultado+="cd";break;
                     case 1: resultado+="cd'";break;
                     case 2: resultado+="c'd'";break;
                     case 3: resultado+="c'd";break;
                 }
+
             }
         }
     }

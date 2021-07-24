@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -232,54 +233,118 @@ void MainWindow::on_pushButton_19_clicked()
 }
 
 void MainWindow::bitacoraKarnaugh(){
-    std::string texto;
+    std::string texto; bool primero = false;
     if(ui->pushButton_3->text().toInt()==1){
-        texto+= "abcd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "abcd";
+        primero = true;
     }
     if(ui->pushButton_4->text().toInt()==1){
-        texto+= "ab'cd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "ab'cd'";
+        primero = true;
     }
     if(ui->pushButton_6->text().toInt()==1){
-        texto+= "a'b'cd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'b'cd";
+        primero = true;
     }
     if(ui->pushButton_5->text().toInt()==1){
-        texto+= "a'bcd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'bcd";
+        primero = true;
     }
     if(ui->pushButton_9->text().toInt()==1){
-        texto+= "abcd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "abcd'";
+        primero = true;
     }
     if(ui->pushButton_7->text().toInt()==1){
-        texto+= "ab'cd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "ab'cd'";
+        primero = true;
     }
     if(ui->pushButton_10->text().toInt()==1){
-        texto+= "a'b'cd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'b'cd'";
+        primero = true;
     }
     if(ui->pushButton_8->text().toInt()==1){
-        texto+= "a'bcd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'bcd'";
+        primero = true;
     }
     if(ui->pushButton_16->text().toInt()==1){
-        texto+= "abc'd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "abc'd'";
+        primero = true;
     }
     if(ui->pushButton_11->text().toInt()==1){
-        texto+= "ab'c'd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "ab'c'd'";
+        primero = true;
     }
     if(ui->pushButton_17->text().toInt()==1){
-        texto+= "a'b'c'd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'b'c'd'";
+        primero = true;
     }
     if(ui->pushButton_14->text().toInt()==1){
-        texto+= "a'bc'd'+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'bc'd'";
+        primero = true;
     }
     if(ui->pushButton_15->text().toInt()==1){
-        texto+= "abc'd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "abc'd";
+        primero = true;
     }
     if(ui->pushButton_12->text().toInt()==1){
-        texto+= "ab'c'd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "ab'c'd";
+        primero = true;
     }
     if(ui->pushButton_18->text().toInt()==1){
-        texto+= "a'b'c'd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'b'c'd";
+        primero = true;
     }
     if(ui->pushButton_13->text().toInt()==1){
-        texto+= "a'bc'd+";
+        if(primero){
+            texto+="+";
+        }
+        texto+= "a'bc'd";
+        primero = true;
     }
     c->agregarFuncion(texto);
 }
@@ -339,8 +404,7 @@ void MainWindow::nuevoHijo(std::string mintermino){
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    delete padre;
-    padre=new QTreeWidgetItem(ui->treeWidget);
+    mostrarHijos();
 }
 
 void MainWindow::mostrarHijos(){
