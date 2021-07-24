@@ -227,6 +227,7 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
+    mostrarHijos();
 }
 
 void MainWindow::agregarRaiz(QString funcion){
@@ -272,6 +273,7 @@ void MainWindow::on_pushButton_clicked()
     string entrada=n.toUtf8().constData();
     c->rellenarLista(entrada);
     c->agregarFuncion(entrada);
+    mostrarHijos();
 }
 
 
@@ -291,17 +293,14 @@ void MainWindow::mostrarHijos(){
     std::string mintermino="";    
     int limite=c.size();    
     for (int i=0;i<limite;i++){
-        if(cadena[i]!='\''&&cadena[i]!='+'){
-            bool condicionUno=i+1<limite-1&&cadena[i+1]=='+';
-            bool condicionDos=i+2<limite-2&&cadena[i+2]=='+';
-            bool condicionTres=i==limite-1;
-            bool condicionCuatro=cadena[i+1]=='\''&&i+2==limite;
-            if(condicionUno||condicionDos||condicionTres||condicionCuatro){
-                nuevoHijo(mintermino);
-                mintermino="";
-            }else{
-               mintermino+=cadena[i];
-            }
+        if(cadena[i]!='+'){
+        mintermino+=cadena[i];
+        }
+        bool condicionUno=cadena[i]=='+';
+        bool condicionDos=i==limite-1;
+        if(condicionUno||condicionDos){
+            nuevoHijo(mintermino);
+            mintermino="";
         }
     }
 }
