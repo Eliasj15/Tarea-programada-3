@@ -7,7 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->treeWidget->setColumnCount(1);
-    agregarRaiz("Funcion");
     padre=new QTreeWidgetItem(ui->treeWidget);
 }
 
@@ -228,7 +227,6 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
-    agregarHijo(padre,"as");
 }
 
 void MainWindow::agregarRaiz(QString funcion){

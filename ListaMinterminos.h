@@ -1,7 +1,8 @@
 #ifndef LISTAMINTERMINOS_H
 #define LISTAMINTERMINOS_H
 #include "Mintermino.h"
-
+#include <iostream>
+using namespace std;
 
 template <class T>
 class ListaMinterminos{
@@ -34,5 +35,25 @@ class ListaMinterminos{
         return resultado;
     };
     T *getCabeza(){return cabeza;};
+
+    string devolverComoString(){
+        string resultado="";
+        Mintermino<ListaVariables<Variable<char>>> *it=cabeza;
+        while(it!=nullptr){
+            ListaVariables<Variable<char>> *lV=it->getListaVariables();
+            Variable<char> *vI=lV->getCabeza();
+            while(vI!=nullptr){
+                resultado+=vI->getLetra();
+                if(vI->getValor()==false){
+                    resultado+="'";
+                }
+            }
+            if(it->getSiguiente()!=nullptr){
+                resultado+="+";
+            }
+        }
+        return resultado;
+
+    }
 };
 #endif
