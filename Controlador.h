@@ -28,6 +28,6 @@ class Controlador{
     void rellenarMatriz(int v, int f, int c);
     void agregarFuncion(string u);
     string devolverMinterminos(){return lista->devolverComoString();};
-    //void listaNueva(){lista=nullptr;lista=new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();};
+    void listaNueva(){lista=nullptr;lista=new ListaMinterminos<Mintermino<ListaVariables<Variable<char>>>>();};
 };
 #endif

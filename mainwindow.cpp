@@ -228,7 +228,6 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
     mostrarHijos();
-    ui->lineEdit->setText(QString::fromStdString(c->devolverMinterminos()));
     bitacoraKarnaugh();
 }
 
