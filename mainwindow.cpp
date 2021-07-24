@@ -227,10 +227,8 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_18->text().toInt(),3,2);
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
-<<<<<<< Updated upstream
     mostrarHijos();
     ui->lineEdit->setText(QString::fromStdString(c->devolverMinterminos()));
-=======
     bitacoraKarnaugh();
 }
 
@@ -285,7 +283,6 @@ void MainWindow::bitacoraKarnaugh(){
         texto+= "a'bc'd+";
     }
     c->agregarFuncion(texto);
->>>>>>> Stashed changes
 }
 
 void MainWindow::agregarRaiz(QString funcion){
