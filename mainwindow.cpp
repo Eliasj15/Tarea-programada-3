@@ -288,8 +288,6 @@ void MainWindow::agregarRaiz(QString funcion){
     QTreeWidgetItem *t=new QTreeWidgetItem(ui->treeWidget);
     t->setText(0,funcion);
     ui->treeWidget->addTopLevelItem(t);
-    agregarHijo(t,"uno");//aquí se modifican los parámetros a mostrar
-    agregarHijo(t,"dos");
 }
 
 void MainWindow::agregarHijo(QTreeWidgetItem *padre, QString mintermino){
@@ -317,6 +315,9 @@ void MainWindow::on_pushButton_21_clicked()
     bool resultado=c->devolverResultado(aEstado,bEstado,cEstado,dEstado);
     v=(resultado==true)?"True":"False";
     ui->lineEdit_5->setText(v);
+    c->listaNueva();
+    ui->lineEdit->setText("");
+
 
 }
 
