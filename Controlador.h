@@ -27,6 +27,6 @@ class Controlador{
     string obtenerHilera();
     void rellenarMatriz(int v, int f, int c);
     void agregarFuncion(string u);
+    string devolverMintermino(){return lista->devolverComoString();};
 };
-
 #endif

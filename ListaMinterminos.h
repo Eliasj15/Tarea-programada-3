@@ -47,10 +47,12 @@ class ListaMinterminos{
                 if(vI->getValor()==false){
                     resultado+="'";
                 }
+                vI=vI->getSiguiente();
             }
             if(it->getSiguiente()!=nullptr){
                 resultado+="+";
             }
+            it=it->getSiguiente();
         }
         return resultado;
 

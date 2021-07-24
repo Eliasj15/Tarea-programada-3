@@ -282,5 +282,26 @@ void MainWindow::nuevoHijo(std::string mintermino){
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    mostrarHijos();
+}
 
+void MainWindow::mostrarHijos(){
+    std::string cadena=c->devolverMintermino();
+    QString c=QString::fromStdString(cadena);
+    std::string mintermino="";    
+    int limite=c.size();    
+    for (int i=0;i<limite;i++){
+        if(cadena[i]!='\''&&cadena[i]!='+'){
+            bool condicionUno=i+1<limite-1&&cadena[i+1]=='+';
+            bool condicionDos=i+2<limite-2&&cadena[i+2]=='+';
+            bool condicionTres=i==limite-1;
+            bool condicionCuatro=cadena[i+1]=='\''&&i+2==limite;
+            if(condicionUno||condicionDos||condicionTres||condicionCuatro){
+                nuevoHijo(mintermino);
+                mintermino="";
+            }else{
+               mintermino+=cadena[i];
+            }
+        }
+    }
 }

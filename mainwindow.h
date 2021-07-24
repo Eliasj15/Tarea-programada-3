@@ -28,6 +28,7 @@ public:
 
     void setControlador(Controlador *p){c=p;};
     void nuevoHijo(std::string mintermino);
+    void mostrarHijos();
 
 private slots:
     void on_pushButton_3_clicked();
