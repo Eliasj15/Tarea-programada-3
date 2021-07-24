@@ -228,6 +228,7 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
     mostrarHijos();
+    ui->lineEdit->setText(QString::fromStdString(c->devolverMinterminos()));
 }
 
 void MainWindow::agregarRaiz(QString funcion){
@@ -288,7 +289,7 @@ void MainWindow::on_pushButton_2_clicked()
 }
 
 void MainWindow::mostrarHijos(){
-    std::string cadena=c->devolverMintermino();
+    std::string cadena=c->devolverMinterminos();
     QString c=QString::fromStdString(cadena);
     std::string mintermino="";    
     int limite=c.size();    
@@ -303,4 +304,9 @@ void MainWindow::mostrarHijos(){
             mintermino="";
         }
     }
+}
+
+void MainWindow::on_lineEdit_cursorPositionChanged(int arg1, int arg2)
+{
+
 }
