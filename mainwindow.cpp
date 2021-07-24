@@ -380,10 +380,10 @@ void MainWindow::on_pushButton_21_clicked()
     bool resultado=c->devolverResultado(aEstado,bEstado,cEstado,dEstado);
     v=(resultado==true)?"True":"False";
     ui->lineEdit_5->setText(v);
-    //c->listaNueva();
+    c->listaNueva();
     ui->lineEdit->setText("");
-
-
+    delete padre;
+    padre=new QTreeWidgetItem(ui->treeWidget);
 }
 
 
