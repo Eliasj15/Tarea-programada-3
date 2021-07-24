@@ -28,9 +28,9 @@ void Controlador::rellenarLista(string entrada){
             Variable<char> *n=new Variable<char>(entrada[i],estado);
             l->agregarVariable(n);    
             estado=true;
-            bool condicionUno=i+1<limite-1&&entrada[i+1]=='+';
-            bool condicionDos=i+2<limite-2&&entrada[i+2]=='+';
-            bool condicionTres=i==limite-1;
+            bool condicionUno=(int)entrada[i]<101&&(int)entrada[i]>96&&entrada[i+1]=='+';
+            bool condicionDos=entrada[i+1]=='\''&&entrada[i+2]=='+';
+            bool condicionTres=(int)entrada[i]<101&&(int)entrada[i]>96&&i==limite-1;
             bool condicionCuatro=entrada[i+1]=='\''&&i+2==limite;
             if(condicionUno||condicionDos||condicionTres||condicionCuatro){
                 Mintermino<ListaVariables<Variable<char>>> *m=new Mintermino<ListaVariables<Variable<char>>>(l);

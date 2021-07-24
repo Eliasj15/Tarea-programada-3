@@ -227,7 +227,6 @@ void MainWindow::on_pushButton_19_clicked()
     c->rellenarMatriz(ui->pushButton_13->text().toInt(),3,3);
     c->rellenarLista(c->obtenerHilera());
     mostrarHijos();
-    ui->lineEdit->setText(QString::fromStdString(c->devolverMinterminos()));
     bitacoraKarnaugh();
 }
 
@@ -352,8 +351,6 @@ void MainWindow::agregarRaiz(QString funcion){
     QTreeWidgetItem *t=new QTreeWidgetItem(ui->treeWidget);
     t->setText(0,funcion);
     ui->treeWidget->addTopLevelItem(t);
-    agregarHijo(t,"uno");//aquí se modifican los parámetros a mostrar
-    agregarHijo(t,"dos");
 }
 
 void MainWindow::agregarHijo(QTreeWidgetItem *padre, QString mintermino){
@@ -381,7 +378,10 @@ void MainWindow::on_pushButton_21_clicked()
     bool resultado=c->devolverResultado(aEstado,bEstado,cEstado,dEstado);
     v=(resultado==true)?"True":"False";
     ui->lineEdit_5->setText(v);
-
+    c->listaNueva();
+    ui->lineEdit->setText("");
+    delete padre;
+    padre=new QTreeWidgetItem(ui->treeWidget);
 }
 
 
