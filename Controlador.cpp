@@ -30,7 +30,7 @@ void Controlador::rellenarLista(string entrada){
             estado=true;
             bool condicionUno=(int)entrada[i]<101&&(int)entrada[i]>96&&entrada[i+1]=='+';
             bool condicionDos=entrada[i+1]=='\''&&entrada[i+2]=='+';
-            bool condicionTres=(int)entrada[i]<101&&(int)entrada[i]>96&&i==limite;
+            bool condicionTres=(int)entrada[i]<101&&(int)entrada[i]>96&&i==limite-1;
             bool condicionCuatro=entrada[i+1]=='\''&&i+2==limite;
             if(condicionUno||condicionDos||condicionTres||condicionCuatro){
                 Mintermino<ListaVariables<Variable<char>>> *m=new Mintermino<ListaVariables<Variable<char>>>(l);
