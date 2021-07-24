@@ -11,8 +11,8 @@ void Bitacora::write(std::string m){
     tm *time = localtime(&now);
 
     std::ofstream archivo;
-    archivo.open(name, std::ios::app);
-    archivo<<time->tm_mday<<"/"<<time->tm_mon+1<<"/"<<2021<<"  "<<time->tm_hour<<":"<<time->tm_min<<":"<<time->tm_sec<<m<<std::endl;
+    archivo.open(name);
+    archivo<<time->tm_mday<<"/"<<time->tm_mon+1<<"/"<<2021<<"  "<<time->tm_hour<<":"<<time->tm_min<<":"<<time->tm_sec<<"  "<<m<<std::endl;
     archivo.close();
 }
 
