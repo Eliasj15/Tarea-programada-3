@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -339,7 +338,8 @@ void MainWindow::nuevoHijo(std::string mintermino){
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    mostrarHijos();
+    delete padre;
+    padre=new QTreeWidgetItem(ui->treeWidget);
 }
 
 void MainWindow::mostrarHijos(){
